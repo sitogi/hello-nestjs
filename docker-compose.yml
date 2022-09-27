@@ -4,9 +4,10 @@ services:
   api:
     build: .
     tty: true
-    ports:
-      - "3000:3000"
     volumes:
       - type: bind
         source: .
         target: /api
+    command: yarn start:dev
+    ports:
+      - "3000:3000"
